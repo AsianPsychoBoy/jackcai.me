@@ -3,6 +3,11 @@ body {
 	margin: 0;
 }
 
+a {
+	text-decoration: none;
+	color: black;
+}
+
 #ribbon-background {
 	z-index: -1;
 	width: 100%;
@@ -62,7 +67,6 @@ body {
 
 .navbar .navbar-item:hover ~ .navbar-item-reverse, .navbar-item-reverse:hover {
 	width: calc(100vw / 3 - 10vw);
-	cursor: pointer;
 }
 
 /*.navbar .navbar-item:before {
@@ -135,5 +139,4 @@ body {
 
 .footer .footer-item:hover ~ .footer-item-reverse, .footer-item-reverse:hover {
 	width: calc(100vw / 3 - 10vw);
-	cursor: pointer;
 }
