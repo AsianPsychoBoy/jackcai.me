@@ -6,6 +6,14 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC"
+  "author": "Jack CAi",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AsianPsychoBoy/jackcai.me.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AsianPsychoBoy/jackcai.me/issues"
+  },
+  "homepage": "https://github.com/AsianPsychoBoy/jackcai.me#readme"
 }

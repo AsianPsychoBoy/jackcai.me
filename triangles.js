@@ -1,6 +1,8 @@
-trianglesConfig = {
-	get clientWidth() { return document.body.clientWidth },
-	get clientHeight() { return document.body.clientHeight },
+'use strict';
+
+const trianglesConfig = {
+    svgEl: '#triangles-background',
+	color: '#000',
 	density: 11 // bigger than 1
 }
 
@@ -9,11 +11,17 @@ mina.easeOutQuad = function(n) {
 };
 
 class Triangles {
+    
+    get clientWidth() { return document.body.clientWidth };
+    get clientHeight() { return document.body.clientHeight };
 
-	constructor() {
-		this.paper = new Snap('#triangles-background');
+	constructor(config) {
+		this.paper = new Snap(config.svgEl || trianglesConfig.svgEl);
 		this.triangleArr = [];
 		this.generateTriangles();
+        
+        this.color = config.color || trianglesConfig.color
+        this.density = config.density || trianglesConfig.density
 	}
 
 	// Helper function to determine if a point is far enough to all the other points in an array
@@ -23,7 +31,7 @@ class Triangles {
 		}
 		for (let i=0; i<ptArr.length; i++) {
 			let distance = Math.sqrt(Math.pow(origin[0] - ptArr[i][0], 2) + Math.pow(origin[1] - ptArr[i][1], 2));
-			if (distance < 1 / trianglesConfig.density) {
+			if (distance < 1 / this.density) {
 				return false;
 			}
 		}
@@ -52,7 +60,7 @@ class Triangles {
 			ptArr.push([x, y]);
 		}
 
-		return ptArr.map(pt => [(pt[0] - 0.25) * trianglesConfig.clientWidth * 1.5, (pt[1] - 0.25) * trianglesConfig.clientHeight * 1.75]);
+		return ptArr.map(pt => [(pt[0] - 0.25) * this.clientWidth * 1.5, (pt[1] - 0.25) * this.clientHeight * 1.75]);
 	}
 	
 	generateTriangles() {
@@ -101,7 +109,7 @@ class Triangles {
 	animateOut(time) {
 		return new Promise((res, rej) => {
 			this.triangleArr.forEach((triangle) => {
-				let clientCenter = [trianglesConfig.clientWidth / 2, trianglesConfig.clientHeight / 2];
+				let clientCenter = [this.clientWidth / 2, this.clientHeight / 2];
 				let xOffset = clientCenter[0] - triangle.center[0];
 				let yOffset = clientCenter[1] - triangle.center[1];
 				triangle.svgEl.animate(
@@ -118,20 +126,20 @@ class Triangles {
 	}
 }
 
-let triangleOverlay = new Triangles();
-
-let out = true;
-triangleOverlay.paper.click(() => {
-	if (!out) {
-		console.log('animate out');
-		triangleOverlay.animateOut(600).then(() => {
-			if (out) {
-				triangleOverlay.generateTriangles()
-			}
-		});
-	} else {
-		console.log('animate in');
-		triangleOverlay.animateIn(600);
-	}
-	out = !out;
-})
+//let triangleOverlay = new Triangles();
+//
+//let out = true;
+//triangleOverlay.paper.click(() => {
+//	if (!out) {
+//		console.log('animate out');
+//		triangleOverlay.animateOut(600).then(() => {
+//			if (out) {
+//				triangleOverlay.generateTriangles()
+//			}
+//		});
+//	} else {
+//		console.log('animate in');
+//		triangleOverlay.animateIn(600);
+//	}
+//	out = !out;
+//})

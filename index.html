@@ -5,46 +5,49 @@
     <title>Jack Cai</title>
     <script src="https://use.fontawesome.com/f3a64bfcc7.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.4.1/snap.svg-min.js"></script>
+      <script type="text/javascript" src="node_modules/page/page.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
     <link rel="stylesheet" href="./styles.css">
   </head>
   <body>
-    <svg id="ribbon-background"></svg>
-    <svg id="triangles-background"></svg>
+      <div id="router-outlet"></div>
+      <script id="home-template" type="text/x-template">
+        <svg id="ribbon-background"></svg>
 
-    <div class="navbar">
-      <a class="navbar-item-group">
-        <div class="navbar-item"><span>About</span></div>
-        <div class="navbar-item-reverse"><span>About</span></div>
-      </a>
-      <a class="navbar-item-group">
-        <div class="navbar-item"><span>Projects</span></div>
-        <div class="navbar-item-reverse"><span>Projects</span></div>
-      </a>
-      <a class="navbar-item-group">
-        <div class="navbar-item"><span>Blog</span></div>
-        <div class="navbar-item-reverse"><span>Blog</span></div>
-      </a>
-    </div>
+        <div class="navbar">
+          <a class="navbar-item-group" href="./about">
+            <div class="navbar-item"><span>About</span></div>
+            <div class="navbar-item-reverse"><span>About</span></div>
+          </a>
+          <a class="navbar-item-group">
+            <div class="navbar-item"><span>Projects</span></div>
+            <div class="navbar-item-reverse"><span>Projects</span></div>
+          </a>
+          <a class="navbar-item-group">
+            <div class="navbar-item"><span>Blog</span></div>
+            <div class="navbar-item-reverse"><span>Blog</span></div>
+          </a>
+        </div>
 
-    <div class="landing-title">
-      <div class="name">Jack Cai</div>
-    </div>
+        <div class="landing-title">
+          <div class="name">Jack Cai</div>
+        </div>
 
-    <div class="footer">
-      <a class="footer-item-group" href="https://github.com/AsianPsychoBoy">
-        <div class="footer-item"><span>Github </span><i class="fa fa-github" aria-hidden="true"></i></div>
-        <div class="footer-item-reverse"><span>Github </span><i class="fa fa-github" aria-hidden="true"></i></div>
-      </a>
-      <a class="footer-item-group" href="https://codepen.io/jack_cai/">
-        <div class="footer-item"><span>Codepen </span><i class="fa fa-codepen" aria-hidden="true"></i></div>
-        <div class="footer-item-reverse"><span>Codepen </span><i class="fa fa-codepen" aria-hidden="true"></i></div>
-      </a>
-      <a class="footer-item-group" href="mailto:jack@jackcai.me">
-        <div class="footer-item"><span>Email </span><i class="fa fa-envelope-o" aria-hidden="true"></i></div>
-        <div class="footer-item-reverse"><span>Email </span><i class="fa fa-envelope-o" aria-hidden="true"></i></div>
-      </a>
-    </div>
+        <div class="footer">
+          <a class="footer-item-group" href="https://github.com/AsianPsychoBoy">
+            <div class="footer-item"><span>Github </span><i class="fa fa-github" aria-hidden="true"></i></div>
+            <div class="footer-item-reverse"><span>Github </span><i class="fa fa-github" aria-hidden="true"></i></div>
+          </a>
+          <a class="footer-item-group" href="https://codepen.io/jack_cai/">
+            <div class="footer-item"><span>Codepen </span><i class="fa fa-codepen" aria-hidden="true"></i></div>
+            <div class="footer-item-reverse"><span>Codepen </span><i class="fa fa-codepen" aria-hidden="true"></i></div>
+          </a>
+          <a class="footer-item-group" href="mailto:jack@jackcai.me">
+            <div class="footer-item"><span>Email </span><i class="fa fa-envelope-o" aria-hidden="true"></i></div>
+            <div class="footer-item-reverse"><span>Email </span><i class="fa fa-envelope-o" aria-hidden="true"></i></div>
+          </a>
+        </div>
+      </script>
 
     <script type="text/javascript" src="./delaunay.js"></script>
     <script type="text/javascript" src="./triangles.js"></script>
