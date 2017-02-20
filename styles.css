@@ -1,3 +1,5 @@
+/* Main Page */
+
 body {
 	font-family: 'Orbitron', sans-serif;
 	margin: 0;
@@ -71,7 +73,7 @@ a {
 }
 
 .button .button-text:hover ~ .button-text-reverse, .button .button-text-reverse:hover {
-	width: calc(100vw / 3 - 10vw - 0.75rem);
+	width: calc(100% - 0.75rem);
 }
 
 /*.navbar .navbar-item:before {
@@ -96,7 +98,7 @@ a {
 	text-align: center;
 	line-height: 15rem;
 	font-size: 10rem;
-	margin: calc((100vh - 25rem) / 2) 15rem 0;
+	margin: calc((100vh - 25rem) / 2) 20% 0;
 	border: 0.75rem solid black;
 }
 
@@ -148,4 +150,50 @@ a {
 
 .inverse-button .inverse-button-text:hover ~ .inverse-button-text-reverse, .inverse-button-text-reverse:hover {
 	width: calc(100vw / 3 - 10vw - 0.75rem);
+}
+
+/* About Page */
+
+.back {
+    position: fixed;
+    top: 0.5rem;
+    left: 0.5rem;
+    width: 15rem;
+}
+
+h2 {
+    font-size: 5em;
+    border: 0.75rem solid black;
+    text-align: center;
+    margin: 5rem 35%;
+}
+
+p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 2rem;
+    margin: auto 20%;
+    position: relative;
+    padding: 0.5rem;
+}
+
+.intro:before {
+    content: " ";
+    position: absolute;
+    top: -0.75rem;
+    left: -0.75rem;
+    width: 5rem;
+    height: 5rem;
+    border-top: 0.75rem solid black;
+    border-left: 0.75rem solid black;
+}
+
+.intro:after {
+    content: " ";
+    position: absolute;
+    bottom: -0.75rem;
+    right: -0.75rem;
+    width: 5rem;
+    height: 5rem;
+    border-bottom: 0.75rem solid black;
+    border-right: 0.75rem solid black;
 }

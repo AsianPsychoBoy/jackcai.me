@@ -1,23 +1,19 @@
 'use strict';
 
-const stripeConfig = {
-    averageWidth: 100,
-    widthVary: 50,
-    colors: ['rgba(93,217,193,0.7)', 'rgba(172,252,217,0.7)', 'rgba(176,132,204,0.7)', 'rgba(102,86,135,0.7)', 'rgba(25,9,51,0.7)']
-}
-
 const stripesConfig = {
     svgEl: '#ribbon-background',
     count: 10,
+    colors: ['rgba(93,217,193,0.7)', 'rgba(172,252,217,0.7)', 'rgba(176,132,204,0.7)', 'rgba(102,86,135,0.7)', 'rgba(25,9,51,0.7)'],
+    averageWidth: 100,
+    widthVary: 50
 }
 
 class Stripe {
   constructor(config) {
-      config = config || {};
-    this.averageWidth = config.averageWidth || stripeConfig.averageWidth;
-    this.widthVary = config.widthVary || stripeConfig.widthVary;
-    this.colors = config.colors || stripeConfig.colors;
-    this.paper = config.svgEl;
+    this.averageWidth = config.averageWidth;
+    this.widthVary = config.widthVary;
+    this.colors = config.colors;
+    this.paper = config.svgRef;
 
     this.x = Math.random() * document.body.clientWidth;
     this.y = Math.random() * document.body.clientHeight - 2000;
@@ -42,15 +38,19 @@ class Stripe {
 
 class Stripes {
     constructor(config) {
-        config = config || {};
-        this.count = config.count || stripesConfig.count;
-        this.paper = new Snap(config.svgEl || stripesConfig.svgEl);
+        config = Object.assign(Object.assign({}, stripesConfig), config);
+        this.count = config.count;
+        this.paper = new Snap(config.svgEl);
         this.stripes = [];
         
         for (let i = 0; i < this.count; i++) {
-            let newStripe = new Stripe(Object.assign(stripeConfig, {svgEl: this.paper}));
+            let newStripe = new Stripe(Object.assign(config, {svgRef: this.paper}));
             this.stripes.push(newStripe);
             newStripe.animateStripe();
         }
+    }
+    
+    clear() {
+        this.paper.clear();
     }
 }
