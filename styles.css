@@ -33,13 +33,17 @@ a {
 	height: 5rem;
 }
 
-.navbar .navbar-item-group {
-	position: relative;
+.navbar .navbar-item {
 	width: calc(100vw / 3 - 10vw);
+
+}
+
+.button {
+    position: relative;
     cursor: pointer;
 }
 
-.navbar .navbar-item-reverse {
+.button .button-text-reverse {
 	direction: rtl;
 	text-align: right;
 	color: white;
@@ -57,7 +61,7 @@ a {
 	white-space: nowrap;
 }
 
-.navbar .navbar-item {
+.button .button-text {
 	text-align: right;
 	font-size: 2.5rem;
 	position: relative;
@@ -66,8 +70,8 @@ a {
 	border-right: 0.75rem solid black;
 }
 
-.navbar .navbar-item:hover ~ .navbar-item-reverse, .navbar-item-reverse:hover {
-	width: calc(100vw / 3 - 10vw);
+.button .button-text:hover ~ .button-text-reverse, .button .button-text-reverse:hover {
+	width: calc(100vw / 3 - 10vw - 0.75rem);
 }
 
 /*.navbar .navbar-item:before {
@@ -105,13 +109,16 @@ a {
 	height: 5rem;
 }
 
-.footer .footer-item-group {
-	position: relative;
-	width: calc(100vw / 3 - 10vw);
+.inverse-button {
+    position: relative;
     cursor: pointer;
 }
 
 .footer .footer-item {
+	width: calc(100vw / 3 - 10vw);
+}
+
+.inverse-button .inverse-button-text {
 	font-size: 2.5rem;
 	position: absolute;
 	top: 0;
@@ -123,7 +130,7 @@ a {
 	transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-.footer .footer-item-reverse {
+.inverse-button .inverse-button-text-reverse {
 	color: white;
 	background-color: black;
 	font-size: 2.5rem;
@@ -139,6 +146,6 @@ a {
 	white-space: nowrap;
 }
 
-.footer .footer-item:hover ~ .footer-item-reverse, .footer-item-reverse:hover {
-	width: calc(100vw / 3 - 10vw);
+.inverse-button .inverse-button-text:hover ~ .inverse-button-text-reverse, .inverse-button-text-reverse:hover {
+	width: calc(100vw / 3 - 10vw - 0.75rem);
 }
