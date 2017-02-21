@@ -3,6 +3,7 @@
 body {
 	font-family: 'Orbitron', sans-serif;
 	margin: 0;
+	background-color: white;
 }
 
 a {
@@ -36,13 +37,13 @@ a {
 }
 
 .navbar .navbar-item {
-	width: calc(100vw / 3 - 10vw);
+	width: calc(100% / 4);
 
 }
 
 .button {
-    position: relative;
-    cursor: pointer;
+	position: relative;
+	cursor: pointer;
 }
 
 .button .button-text-reverse {
@@ -92,19 +93,22 @@ a {
 
 .landing-title {
 	z-index: 100;
+	display: flex;
+	justify-content: center;
+	height: calc(100vh - 13rem);
 }
 
 .landing-title .name {
+	align-self: center;
 	text-align: center;
-	line-height: 15rem;
 	font-size: 10rem;
-	margin: calc((100vh - 25rem) / 2) 20% 0;
+	/*margin: calc(50% - 10rem) 20% 0;*/
 	border: 0.75rem solid black;
+	padding: 0.5rem 2rem;
 }
 
 .footer {
-	position: absolute;
-	bottom: 0.75rem;
+	margin: 0.75rem 0;
 	width: 100%;
 	display: flex;
 	justify-content: space-around;
@@ -112,12 +116,12 @@ a {
 }
 
 .inverse-button {
-    position: relative;
-    cursor: pointer;
+	position: relative;
+	cursor: pointer;
 }
 
 .footer .footer-item {
-	width: calc(100vw / 3 - 10vw);
+	width: calc(100% / 4);
 }
 
 .inverse-button .inverse-button-text {
@@ -149,41 +153,41 @@ a {
 }
 
 .inverse-button .inverse-button-text:hover ~ .inverse-button-text-reverse, .inverse-button-text-reverse:hover {
-	width: calc(100vw / 3 - 10vw - 0.75rem);
+	width: calc(100% - 0.75rem);
 }
 
 /* About Page */
 
 .back {
-    position: fixed;
-    top: 0.5rem;
-    left: 0.5rem;
-    width: 15rem;
+	position: fixed;
+	top: 0.5rem;
+	left: 0.5rem;
+	width: 15rem;
 }
 
 h2 {
 	display: block;
-    font-size: 4em;
-    border: 0.75rem solid black;
-    text-align: center;
-    margin: 3rem 35%;
+	font-size: 4em;
+	border: 0.75rem solid black;
+	text-align: center;
+	margin: 3rem 35%;
 	padding: 0.5rem;
 }
 
 p {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 2rem;
-    margin: 3rem 20%;
-    position: relative;
-    padding: 0.5rem;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 2rem;
+	margin: 3rem 20%;
+	position: relative;
+	padding: 0.5rem;
 }
 
 p:before {
-    content: " ";
-    position: absolute;
-    left: -0.75rem;
-    height: 100%;
-    border-left: 0.75rem solid black;
+	content: " ";
+	position: absolute;
+	left: -0.75rem;
+	height: 100%;
+	border-left: 0.75rem solid black;
 }
 
 p .author {
@@ -217,48 +221,77 @@ p .author {
 
 .top-left-corner {
 	content: " ";
-    position: absolute;
-    top: -0.75rem;
-    left: -0.75rem;
-    width: 3rem;
-    height: 3rem;
-    border-top: 0.75rem solid black;
-    border-left: 0.75rem solid black;
+	position: absolute;
+	top: -0.75rem;
+	left: -0.75rem;
+	width: 3rem;
+	height: 3rem;
+	border-top: 0.75rem solid black;
+	border-left: 0.75rem solid black;
 }
 
 .bottom-right-corner {
 	content: " ";
-    position: absolute;
-    bottom: -0.75rem;
-    right: -0.75rem;
-    width: 3rem;
-    height: 3rem;
-    border-bottom: 0.75rem solid black;
-    border-right: 0.75rem solid black;
+	position: absolute;
+	bottom: -0.75rem;
+	right: -0.75rem;
+	width: 3rem;
+	height: 3rem;
+	border-bottom: 0.75rem solid black;
+	border-right: 0.75rem solid black;
 }
 
 .top-right-corner {
 	content: " ";
-    position: absolute;
-    top: -0.75rem;
-    right: -0.75rem;
-    width: 3rem;
-    height: 3rem;
-    border-top: 0.75rem solid black;
-    border-right: 0.75rem solid black;
+	position: absolute;
+	top: -0.75rem;
+	right: -0.75rem;
+	width: 3rem;
+	height: 3rem;
+	border-top: 0.75rem solid black;
+	border-right: 0.75rem solid black;
 }
 
 .bottom-left-corner {
 	content: " ";
-    position: absolute;
-    bottom: -0.75rem;
-    left: -0.75rem;
-    width: 3rem;
-    height: 3rem;
-    border-bottom: 0.75rem solid black;
-    border-left: 0.75rem solid black;
+	position: absolute;
+	bottom: -0.75rem;
+	left: -0.75rem;
+	width: 3rem;
+	height: 3rem;
+	border-bottom: 0.75rem solid black;
+	border-left: 0.75rem solid black;
 }
 
 /* Skills Page */
 
+.skills {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
 
+.skills .skills-item {
+	display: flex;
+	justify-content: center;
+	position: relative;
+	width: 10rem;
+	height: 10rem;
+	margin: 3rem 4rem;
+}
+
+.skills .skills-item:before {
+	content: " ";
+	height: 10rem;
+	width: 10rem;
+	position: absolute;
+	top: -0.75rem;
+	border: 0.75rem solid black;
+	transform: rotate(45deg);
+}
+
+.skills .skill-text {
+	font-size: 2rem;
+	align-self: center;
+	white-space: nowrap;
+}

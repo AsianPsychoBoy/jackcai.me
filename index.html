@@ -1,118 +1,147 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
-    <title>Jack Cai</title>
-    <script src="https://use.fontawesome.com/f3a64bfcc7.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.4.1/snap.svg-min.js"></script>
-      <script type="text/javascript" src="node_modules/page/page.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Orbitron" rel="stylesheet">
-    <link rel="stylesheet" href="./styles.css">
-  </head>
-  <body>
-      <div id="router-outlet"></div>
-      <script id="home-template" type="text/x-template">
-        <svg id="ribbon-background"></svg>
+	<head>
+		<meta charset="UTF-8">
+		<!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+		<title>Jack Cai</title>
+		<script src="https://use.fontawesome.com/f3a64bfcc7.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.4.1/snap.svg-min.js"></script>
+			<script type="text/javascript" src="node_modules/page/page.js"></script>
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans|Orbitron" rel="stylesheet">
+		<link rel="stylesheet" href="./styles.css">
+	</head>
+	<body>
+			<div id="router-outlet"></div>
+			<script id="home-template" type="text/x-template">
+				<svg id="ribbon-background"></svg>
 
-        <div class="navbar">
-          <a class="navbar-item button" href="./about">
-            <div class="button-text"><span>About</span></div>
-            <div class="button-text-reverse"><span>About</span></div>
-          </a>
-          <a class="navbar-item button" href="./projects">
-            <div class="button-text"><span>Projects</span></div>
-            <div class="button-text-reverse"><span>Projects</span></div>
-          </a>
-          <a class="navbar-item button" href="./skills">
-            <div class="button-text"><span>Skills</span></div>
-            <div class="button-text-reverse"><span>Skills</span></div>
-          </a>
-        </div>
+				<div class="navbar">
+					<a class="navbar-item button" href="./about">
+						<div class="button-text"><span>About</span></div>
+						<div class="button-text-reverse"><span>About</span></div>
+					</a>
+					<a class="navbar-item button" href="./projects">
+						<div class="button-text"><span>Projects</span></div>
+						<div class="button-text-reverse"><span>Projects</span></div>
+					</a>
+					<a class="navbar-item button" href="./skills">
+						<div class="button-text"><span>Skills</span></div>
+						<div class="button-text-reverse"><span>Skills</span></div>
+					</a>
+				</div>
 
-        <div class="landing-title">
-          <div class="name">Jack Cai</div>
-        </div>
+				<div class="landing-title">
+					<div class="name">Jack Cai</div>
+				</div>
 
-        <div class="footer">
-          <a class="footer-item inverse-button" href="https://github.com/AsianPsychoBoy">
-            <div class="inverse-button-text"><span>Github </span><i class="fa fa-github" aria-hidden="true"></i></div>
-            <div class="inverse-button-text-reverse"><span>Github </span><i class="fa fa-github" aria-hidden="true"></i></div>
-          </a>
-          <a class="footer-item inverse-button" href="https://codepen.io/jack_cai/">
-            <div class="inverse-button-text"><span>Codepen </span><i class="fa fa-codepen" aria-hidden="true"></i></div>
-            <div class="inverse-button-text-reverse"><span>Codepen </span><i class="fa fa-codepen" aria-hidden="true"></i></div>
-          </a>
-          <a class="footer-item inverse-button" href="mailto:jack@jackcai.me">
-            <div class="inverse-button-text"><span>Email </span><i class="fa fa-envelope-o" aria-hidden="true"></i></div>
-            <div class="inverse-button-text-reverse"><span>Email </span><i class="fa fa-envelope-o" aria-hidden="true"></i></div>
-          </a>
-        </div>
-      </script>
+				<div class="footer">
+					<a class="footer-item inverse-button" href="https://github.com/AsianPsychoBoy">
+						<div class="inverse-button-text"><span>Github </span><i class="fa fa-github" aria-hidden="true"></i></div>
+						<div class="inverse-button-text-reverse"><span>Github </span><i class="fa fa-github" aria-hidden="true"></i></div>
+					</a>
+					<a class="footer-item inverse-button" href="https://codepen.io/jack_cai/">
+						<div class="inverse-button-text"><span>Codepen </span><i class="fa fa-codepen" aria-hidden="true"></i></div>
+						<div class="inverse-button-text-reverse"><span>Codepen </span><i class="fa fa-codepen" aria-hidden="true"></i></div>
+					</a>
+					<a class="footer-item inverse-button" href="mailto:jack@jackcai.me">
+						<div class="inverse-button-text"><span>Email </span><i class="fa fa-envelope-o" aria-hidden="true"></i></div>
+						<div class="inverse-button-text-reverse"><span>Email </span><i class="fa fa-envelope-o" aria-hidden="true"></i></div>
+					</a>
+				</div>
+			</script>
 
-      <script id="about-template" type="text/x-template">
-        <svg id="ribbon-background"></svg>
+			<script id="about-template" type="text/x-template">
+				<svg id="ribbon-background"></svg>
 
-        <a class="back button" href="./">
-            <div class="button-text"><span>Back</span></div>
-            <div class="button-text-reverse"><span>Back</span></div>
-        </a>
-        
-        <h2>ABOUT</h2>
-        <p>Hi, I am Jack Cai. I am currently a high schooler aiming to be a full stack web developer.</p>
-        <p>Technological advances could allow us to see more clearly into our own lives.<span class="author">-Kevin Kelly<span></p>
-      </script>
+				<a class="back button" href="./">
+						<div class="button-text"><span>Back</span></div>
+						<div class="button-text-reverse"><span>Back</span></div>
+				</a>
+				
+				<h2>ABOUT</h2>
+				<p>Hi, I am Jack Cai. I am currently a high schooler aiming to be a full stack web developer.</p>
+				<p>Technological advances could allow us to see more clearly into our own lives.<span class="author">-Kevin Kelly<span></p>
+			</script>
 
-      <script id="projects-template" type="text/x-template">
-        <svg id="ribbon-background"></svg>
+			<script id="projects-template" type="text/x-template">
+				<svg id="ribbon-background"></svg>
 
-        <a class="back button" href="./">
-            <div class="button-text"><span>Back</span></div>
-            <div class="button-text-reverse"><span>Back</span></div>
-        </a>
+				<a class="back button" href="./">
+						<div class="button-text"><span>Back</span></div>
+						<div class="button-text-reverse"><span>Back</span></div>
+				</a>
 
-        <h2>Projects</h2>
+				<h2>Projects</h2>
 
-        <div class="projects">
-          <div class="projects-item">
-            <div class="top-left-corner"></div>
-            <div class="top-right-corner"></div>
-            <div class="bottom-left-corner"></div>
-            <div class="bottom-right-corner"></div>
-            <div class="projects-item-text">
-              MyMICDS.net
-            </div>
-            <img class="projects-item-img">
-          </div>
-          <div class="projects-item">
-            <div class="top-left-corner"></div>
-            <div class="top-right-corner"></div>
-            <div class="bottom-left-corner"></div>
-            <div class="bottom-right-corner"></div>
-            <div class="projects-item-text">
-              Pear Tutoring
-            </div>
-            <img class="projects-item-img">
-          </div>
-        </div>
-      </script>
+				<div class="projects">
+					<div class="projects-item">
+						<div class="top-left-corner"></div>
+						<div class="top-right-corner"></div>
+						<div class="bottom-left-corner"></div>
+						<div class="bottom-right-corner"></div>
+						<div class="projects-item-text">
+							MyMICDS.net
+						</div>
+						<img class="projects-item-img">
+					</div>
+					<div class="projects-item">
+						<div class="top-left-corner"></div>
+						<div class="top-right-corner"></div>
+						<div class="bottom-left-corner"></div>
+						<div class="bottom-right-corner"></div>
+						<div class="projects-item-text">
+							Pear Tutoring
+						</div>
+						<img class="projects-item-img">
+					</div>
+				</div>
+			</script>
 
-      <script id="skills-template" type="text/x-template">
-        <svg id="ribbon-background"></svg>
+			<script id="skills-template" type="text/x-template">
+				<svg id="ribbon-background"></svg>
 
-        <a class="back button" href="./">
-            <div class="button-text"><span>Back</span></div>
-            <div class="button-text-reverse"><span>Back</span></div>
-        </a>
+				<a class="back button" href="./">
+						<div class="button-text"><span>Back</span></div>
+						<div class="button-text-reverse"><span>Back</span></div>
+				</a>
 
-        <h2>Skills</h2>
+				<h2>Skills</h2>
 
-        
-      </script>
+				<div class="skills">
+					<div class="skills-item">
+						<span class="skill-text">HTML5</span>
+						<img class="skills-img" src="">
+					</div>
+					<div class="skills-item">
+						<span class="skill-text">CSS3</span>
+						<img class="skills-img" src="">
+					</div>
+					<div class="skills-item">
+						<span class="skill-text">Javascript</span>
+						<img class="skills-img" src="">
+					</div>
+					<div class="skills-item">
+						<span class="skill-text">PHP</span>
+						<img class="skills-img" src="">
+					</div>
+					<div class="skills-item">
+						<span class="skill-text">Node.js</span>
+						<img class="skills-img" src="">
+					</div>
+					<div class="skills-item">
+						<span class="skill-text">Angular 2</span>
+						<img class="skills-img" src="">
+					</div>
+					<div class="skills-item">
+						<span class="skill-text">Mongo DB</span>
+						<img class="skills-img" src="">
+					</div>
+				</div>
+			</script>
 
-    <script type="text/javascript" src="./delaunay.js"></script>
-    <script type="text/javascript" src="./triangles.js"></script>
-    <script type="text/javascript" src="./stripes.js"></script>
-    <script type="text/javascript" src="./script.js"></script>
-  </body>
+		<script type="text/javascript" src="./delaunay.js"></script>
+		<script type="text/javascript" src="./triangles.js"></script>
+		<script type="text/javascript" src="./stripes.js"></script>
+		<script type="text/javascript" src="./script.js"></script>
+	</body>
 </html>
