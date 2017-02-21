@@ -42,14 +42,14 @@ class Stripes {
         this.count = config.count;
         this.paper = new Snap(config.svgEl);
         this.stripes = [];
-        
+
         for (let i = 0; i < this.count; i++) {
             let newStripe = new Stripe(Object.assign(config, {svgRef: this.paper}));
             this.stripes.push(newStripe);
             newStripe.animateStripe();
         }
     }
-    
+
     clear() {
         this.paper.clear();
     }
