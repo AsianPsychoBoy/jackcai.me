@@ -168,7 +168,6 @@ a {
 h2 {
 	display: block;
 	font-size: 4em;
-	border: 0.75rem solid black;
 	text-align: center;
 	margin: 3rem 35%;
 	padding: 0.5rem;
@@ -267,31 +266,53 @@ p .author {
 
 .skills {
 	display: flex;
-	justify-content: center;
-	flex-wrap: wrap;
+	flex-direction: column;
+	width: 100%;
+}
+
+.skills .skills-row {
+	display: flex;
+	justify-content: flex-start;
+	align-self: center;
+	margin-left: -6rem;
+}
+
+.skills .skills-row:nth-child(2n) {
+	margin-left: 12rem;
 }
 
 .skills .skills-item {
 	display: flex;
 	justify-content: center;
-	position: relative;
-	width: 10rem;
-	height: 10rem;
-	margin: 3rem 4rem;
+	width: calc(10.75rem * 1.41421356237);
+	height: calc(10.75rem * 1.41421356237);
+	margin: 0 2rem;
 }
 
-.skills .skills-item:before {
-	content: " ";
+.skills .skills-item-mask {
+	align-self: center;
+	position: relative;
+	display: flex;
+	justify-content: center;
 	height: 10rem;
 	width: 10rem;
-	position: absolute;
-	top: -0.75rem;
 	border: 0.75rem solid black;
+	transform-origin: 50% 50%;
 	transform: rotate(45deg);
+	overflow: hidden;
 }
 
 .skills .skill-text {
 	font-size: 2rem;
 	align-self: center;
 	white-space: nowrap;
+	transform: rotate(-45deg);
+}
+
+.skills .skills-img {
+	align-self: center;
+	transform-origin: 50% 50%;
+	transform: rotate(-45deg);
+	position: absolute;
+	width: 100%;
 }
