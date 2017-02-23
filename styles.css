@@ -278,7 +278,7 @@ p .author {
 }
 
 .skills .skills-row:nth-child(2n) {
-	margin-left: 12rem;
+	margin-left: 13.25rem;
 }
 
 .skills .skills-item {
@@ -303,10 +303,27 @@ p .author {
 }
 
 .skills .skill-text {
-	font-size: 2rem;
+	position: absolute;
 	align-self: center;
+	display: flex;
+	justify-content: center;
+	width: 15rem;
+	height: 0;
+	color: white;
+	background-color: black;
+	font-size: 2rem;
 	white-space: nowrap;
+	overflow: hidden;
 	transform: rotate(-45deg);
+	transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.skills .skill-text span {
+	align-self: center;
+}
+
+.skills .skills-item-mask:hover > .skill-text {
+	height: 15rem;
 }
 
 .skills .skills-img {
