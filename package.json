@@ -4,9 +4,9 @@
   "description": "Jack Cai",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon dev_server/index.js"
   },
-  "author": "Jack CAi",
+  "author": "Jack Cai",
   "license": "ISC",
   "repository": {
     "type": "git",
@@ -15,5 +15,12 @@
   "bugs": {
     "url": "https://github.com/AsianPsychoBoy/jackcai.me/issues"
   },
-  "homepage": "https://github.com/AsianPsychoBoy/jackcai.me#readme"
+  "homepage": "https://github.com/AsianPsychoBoy/jackcai.me#readme",
+  "devDependencies": {
+    "express": "^4.15.2",
+    "nodemon": "^1.11.0"
+  },
+  "dependencies": {
+    "page": "^1.7.1"
+  }
 }
