@@ -5,7 +5,8 @@ app.use('/scripts/page', express.static('./node_modules/page/'));
 app.use('/assets', express.static('./assets'));
 app.use('/', express.static('./src'));
 
-app.get('/*', function(req, res) {
+app.all('/*', function(req, res) {
+	console.log('redirected');
 	res.redirect('/');
 })
 
