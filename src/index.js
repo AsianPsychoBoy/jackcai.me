@@ -3,13 +3,12 @@ const app = express();
 
 app.use('/scripts/page', express.static('./node_modules/page/'));
 app.use('/assets', express.static('./src/public/assets'));
-app.use('/', express.static('./src/public'));
+app.use('/css', express.static('./src/public/css'));
+app.use('/', express.static('./src/public/'));
 
 app.get('/*', function(req, res) {
 	if (req.path !== '/') {
 		res.redirect('/');
-	} else {
-		res.sendFile(__dirname + '/public/index.html')
 	}
 })
 
