@@ -10,7 +10,7 @@ app.get('/*', function(req, res) {
 		res.redirect('/');
 	}
 
-	res.sendFile(__dirname + '/src/index.html');
+	res.sendFile(__dirname + '/index.html');
 })
 
 app.listen(1516, function () {
