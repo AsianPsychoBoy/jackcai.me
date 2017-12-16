@@ -9,8 +9,6 @@ app.get('/*', function(req, res) {
 	if (req.path !== '/') {
 		res.redirect('/');
 	}
-
-	res.sendFile(__dirname + '/public/index.html');
 })
 
 app.listen(1516, function () {
