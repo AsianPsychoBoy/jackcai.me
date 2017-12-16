@@ -10,6 +10,8 @@ app.get('/*', function(req, res) {
 		res.redirect('/');
 	}
 
+	res.sendFile('./src/index.html');
+	res.end();
 })
 
 app.listen(1516, function () {
