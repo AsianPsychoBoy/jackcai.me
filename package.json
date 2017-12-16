@@ -17,10 +17,10 @@
   },
   "homepage": "https://github.com/AsianPsychoBoy/jackcai.me#readme",
   "devDependencies": {
-    "express": "^4.15.2",
     "nodemon": "^1.11.0"
   },
   "dependencies": {
+    "express": "^4.15.2",
     "page": "^1.7.1"
   }
 }
