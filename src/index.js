@@ -10,7 +10,7 @@ app.get('/*', function(req, res) {
 	if (req.path !== '/') {
 		res.redirect('/');
 	}
-})
+});
 
 app.listen(1516, function () {
   console.log('App listening on port 1516!')
