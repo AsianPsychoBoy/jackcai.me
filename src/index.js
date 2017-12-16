@@ -9,7 +9,7 @@ app.get('/*', function(req, res) {
 	if (req.path !== '/') {
 		res.redirect('/');
 	}
-	res.end();
+
 })
 
 app.listen(1516, function () {
