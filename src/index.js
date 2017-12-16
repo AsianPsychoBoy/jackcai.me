@@ -8,6 +8,8 @@ app.use('/', express.static('./src/public'));
 app.get('/*', function(req, res) {
 	if (req.path !== '/') {
 		res.redirect('/');
+	} else {
+		res.sendFile(__dirname + '/public/index.html')
 	}
 })
 
