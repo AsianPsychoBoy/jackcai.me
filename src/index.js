@@ -11,7 +11,6 @@ app.get('/*', function(req, res) {
 	}
 
 	res.sendFile(__dirname + '/src/index.html');
-	res.end();
 })
 
 app.listen(1516, function () {
